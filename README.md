@@ -6,11 +6,6 @@ In these exercises, I had to make a gossip site and put it online on Heroku.
 
 The live version is available on Heroku here : https://mxrch-the-gossip-project.herokuapp.com/
 
-***This includes :***
-* Users,
-* Gossips,
-* Tags,
-* and private messages.
 
 **After cloning the repository, make sure to do :**
 ```sh
