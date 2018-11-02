@@ -1,0 +1,36 @@
+<br>
+<br>
+<br>
+<div align="center">
+  <h2 style="color:  #f1f1f1">La liste des potins</h2>
+  <br>
+  <% if current_user %>
+    <a class="btn btn-success" href="/gossips/new" role="button">Ajouter un potin</a>
+  <% end %>
+</div>
+<br>
+<% for gossip in @gossips %>
+<div align="center">
+  <div class="card text-center" style="width: 40rem;">
+    <div class="card-header">
+      <h4><%= "#{gossip.anonymous_author}" %></h4>
+    </div>
+      <div class="card-body">
+          <h6 class="card-text"><%= "#{gossip.content}" %></h6>
+          <br>
+          <span class="fas fa-comments"></span> <%= Comment.where(gossip_id: gossip.id).count %>
+          <span style="padding-left: 20px" class="fas fa-thumbs-up"></span> <%= Like.where(gossip_id: gossip.id).count %>
+          <br>
+          <br>
+            <div id="buttons">
+              <%= link_to '+ de détail', gossip_path(gossip), class: "btn btn-primary" %>
+              <% if current_user && current_user.id == gossip.user_id %>
+                <%= link_to 'Modifier', edit_gossip_path(gossip), class: "btn btn-success", id: "btn-middle" %>
+                <%= button_to 'Supprimer', gossip, method: :delete, class: "btn btn-danger", data: { confirm: 'Êtes-vous sûr ?' } %>
+              <% end %>
+            </div>
+      </div>
+    </div>
+    <br>
+  </div>
+<% end %>

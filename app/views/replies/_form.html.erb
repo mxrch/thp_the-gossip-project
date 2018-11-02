@@ -1,0 +1,15 @@
+<%= bootstrap_form_with(model: @reply, url: [@gossip, @comment, @reply]) do |form| %>
+  <div id="submit_form">
+      <div class="field">
+        <%= form.text_field :anonymous_replier, placeholder: "Utilisateur anonyme", label: "Utilisateur anonyme", label_class: "form_label"%>
+      </div>
+
+      <div class="field">
+        <%= form.text_area :content, placeholder: "Réponse", label: "Réponse", label_class: "form_label"%>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Confirmer", class: "btn btn-success" %>
+      </div>
+    </div>
+<% end %>

@@ -1,0 +1,34 @@
+<%= bootstrap_form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="submit_form">
+    <div class="field">
+      <%= form.text_field :email, placeholder: "Adresse email", label: "Adresse email", label_class: "form_label"%>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :name, placeholder: "Le nom de l'utilisateur", label: "Nom", label_class: "form_label"%>
+    </div>
+
+    <div class="field">
+      <%= form.password_field :password, placeholder: "Mot de passe", label: "Mot de passe", label_class: "form_label"%>
+    </div>
+
+    <div class="field">
+      <%= form.password_field :password_confirmation, placeholder: "Confirmation du mot de passe", label: "Confirmation du mot de passe", label_class: "form_label"%>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Confirmer", class: "btn btn-success" %>
+    </div>
+<% end %>

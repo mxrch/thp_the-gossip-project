@@ -1,0 +1,15 @@
+<%= bootstrap_form_with(model: gossip) do |form| %>
+  <div id="submit_form">
+      <div class="field">
+        <%= form.text_field :anonymous_author, placeholder: "Auteur anonyme", label: "Auteur anonyme", label_class: "form_label"%>
+      </div>
+
+      <div class="field">
+        <%= form.text_area :content, placeholder: "Potin", label: "Potin", label_class: "form_label"%>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Confirmer", class: "btn btn-success" %>
+      </div>
+    </div>
+<% end %>

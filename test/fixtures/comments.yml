@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  anonymous_commentator: MyString
+  content: MyText
+  user: one
+  gossip: one
+
+two:
+  anonymous_commentator: MyString
+  content: MyText
+  user: two
+  gossip: two
