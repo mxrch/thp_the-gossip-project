@@ -10,6 +10,9 @@ In these exercises, I had to do **a gossip site**.
 * Comments,
 * and replies.
 
+
+**The live version : https://mxrch-the-gossip-project.herokuapp.com/**
+
 **After cloning the repository, make sure to do :**
 ```sh
 $ cd thp_the-gossip-project
