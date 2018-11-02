@@ -1,24 +1,28 @@
-# README
+# The Hacking Project - The Gossip Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## :mag: The content
+In these exercises, I had to do **a gossip site**.
 
-* Ruby version
+***This includes :***
+* Users,
+* Gossips,
+* Comments,
+* and replies.
 
-* System dependencies
+**After cloning the repository, make sure to do :**
+```sh
+$ cd thp_the-gossip-project
+$ bundle install
+```
 
-* Configuration
+This will install all the dependencies needed for the exercises.
 
-* Database creation
+## :european_post_office: The Strasbourgeois Crew
+Done in team with @OwwllMan, @zOmegad, @Runefire32, @BrokenPirate and myself (@mxrch). :heart:
 
-* Database initialization
+<hr>
 
-* How to run the test suite
+***It's an exercise from the TheHackingProject bootcamp.***
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+***> www.thehackingproject.org***
